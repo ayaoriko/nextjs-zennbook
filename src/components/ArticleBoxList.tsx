@@ -25,7 +25,9 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
                     <Link href={`${ROUTES.basePath}${ROUTES.categoryPath}/${post.category.id}`} className=' text-white text-[10px] bg-[#FF3E6E] py-[4px] px-[6px] rounded-[8px] absolute top-[12px] left-[12px] leading-none hover:bg-gray-400 transition-smooth'>{post.category.name}</Link>
                     <Link className='block flex-1 p-[12px] pb-0 font-bold tracking-wide line-clamp-3 ' href={`${ROUTES.basePath}${post.id}`}>{post.title}
                     </Link>
-                    <div className='block p-[12px] text-[12px]'>{dayjs(post.publishedAt).format('YYYY.MM.DD')}</div>
+                    <div className='block p-[12px] text-[12px]'>
+                        {post.publishedAt ? dayjs(post.publishedAt).format('YYYY.MM.DD') : '日付不明'}
+                    </div>
                 </li>
             ))
             }

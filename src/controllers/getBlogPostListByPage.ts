@@ -15,7 +15,7 @@ export async function getBlogPostListByPage(
         queries: {
             limit,
             offset,
-            fields: 'id,title,category',
+            fields: 'id,title,category,publishedAt',
         },
     });
     // microCMS SDK の戻り値に totalCount を含められるか確認
