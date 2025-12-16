@@ -18,12 +18,12 @@ export const client = createClient({
 });
 
 // 1ページあたりの表示件数
-export const BLOG_LIMIT = 5;
+export const BLOG_LIMIT = 8;
 
 // APIのエンドポイントを定義
 export const ROUTES = {
     basePath: '/',
-    categoryPath: '/category',
+    categoryPath: 'category',
     blog: 'blog',
     category: 'categories',
 };

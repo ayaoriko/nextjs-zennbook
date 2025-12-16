@@ -1,13 +1,6 @@
 import { client } from '@/libs/microcms';
 import { ROUTES, BLOG_LIMIT } from "@/libs/microcms";
-
-export type Post = {
-    id: string;
-    title: string;
-    body: string;
-    publishedAt: string;
-    category: { name: string, id: string };
-};
+import type { Post } from '@/types/microcms';
 
 // microCMSからブログ記事一覧を取得
 // 引数：page（必須）、limitで記事の件数指定

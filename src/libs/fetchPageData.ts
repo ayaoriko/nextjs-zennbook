@@ -2,8 +2,14 @@
 import { notFound, redirect } from "next/navigation";
 import { getBlogPostListByPage } from "@/controllers/getBlogPostListByPage";
 import { BLOG_LIMIT, ROUTES } from "@/libs/microcms";
+import type { Post } from '@/types/microcms';
 
-export async function fetchPageData(params: { page?: string[] }) {
+export async function fetchPageData(params: { page?: string[] }): Promise<{
+    pageNum: number;
+    // controller 側で定義している Post 型を使う
+    posts: Post[];
+    totalPages: number;
+}> {
 
     // params.page は配列か undefined
     const pageArray = params.page;
@@ -27,7 +33,7 @@ export async function fetchPageData(params: { page?: string[] }) {
 
     // 1ページ目ならトップへリダイレクト（page がある場合のみ）
     if (pageNum === 1 && pageArray && pageArray.length > 0) {
-        redirect(`${ROUTES.basePath}/`);
+        redirect(`${ROUTES.basePath}`);
     }
 
     return {
