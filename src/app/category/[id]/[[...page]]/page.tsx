@@ -26,7 +26,7 @@ export default async function CategoryPagedPage({ params }: { params: Promise<{ 
             </div>
             <div className='bg-[#F7EDF5]'>
                 <div className="max-w-[880px] mx-auto px-[14px] py-[40px]">
-                    <ArticleBoxList posts={posts} />
+                    <ArticleBoxList posts={posts} showCategory={false} />
                     <div className="pt-[60px] ">
                         <Pegnation currentPage={pageNum} totalPageCount={totalPages} basePath={`/category/${id}/page`} />
                     </div>

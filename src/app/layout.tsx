@@ -19,9 +19,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </head>
       <body className='tracking-wider'>
+        <Link href="https://ayaoriko.com/coding/react/nextjs-microcms/" target='blank' className='block w-full text-center bg-[#FF3E6E] text-white py-[5px] text-[14px] hover:text-[#F3C7D8] transition-smooth'>ゼンぶっくの制作経緯はブログで紹介中！</Link>
         <header className='bg-white px-[14px] py-[20px] border-b-[1px] border-[#E4EDF4]'>
-          <div className='  max-w-[1228px]  mx-auto'>
-            <h1 className='text-lg font-bold'><Link href={ROUTES.basePath}>あやおり子のゼンぶっく</Link></h1>
+          <div className='max-w-[1228px]  mx-auto'>
+            <h1 className='text-lg font-bold'><Link href={ROUTES.basePath} className='hover:text-[#FF3E6E] transition-smooth'>あやおり子のゼンぶっく</Link></h1>
           </div>
         </header>
         {/* ページごとのコンテンツ */}

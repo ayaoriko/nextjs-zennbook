@@ -34,7 +34,7 @@ export default async function Single({ params }: { params: Promise<{ slug: strin
                     <div className='lg:max-w-[790px] w-full'>
                         <div className="bg-white mx-auto px-[20px] py-[40px] lg:px-[40px]">
                             <div className='mb-4'>
-                                <Link href={`${ROUTES.basePath}${ROUTES.categoryPath}/${post.category.id}`} className='inline-flex items-center border border-[#D9D9D9] gap-[5px]  rounded-3xl py-[0.4em] px-[0.8em]'>
+                                <Link href={`${ROUTES.basePath}${ROUTES.categoryPath}/${post.category.id}`} className='inline-flex items-center border border-[#D9D9D9] gap-[5px]  rounded-3xl py-[0.4em] px-[0.8em] hover:bg-gray-100 transition-smooth'>
                                     <span className='flex bg-[#F7EDF5] rounded-[50%] p-[0.4em]'>
                                         <span className="material-symbols-outlined !text-[18px] text-[#FF3E6E]">{post.category.icon}</span>
                                     </span>

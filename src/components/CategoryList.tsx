@@ -8,10 +8,12 @@ export default async function CategoryList() {
         return <p>カテゴリーが見つかりません。</p>;
     }
     return (
-        <ul>
+        <ul className='CategoryList'>
             {categories.map((cat: Category) => (
-                <li key={cat.id}>
-                    <Link href={`/category/${cat.id}`}>{cat.name}</Link>
+                <li key={cat.id} className=' p-2 relative pt-[0.5em] px-[0.5em] pb-[0.5em] pl-[2.5em]'>
+                    <span className="material-symbols-outlined text-[#FF3E6E] !text-[18px]  bg-[#FFCFE1] p-[0.3em] rounded-full mr-[1em] absolute left-0 top-0 bottom-0 my-auto w-[28px] h-[28px]">{cat.icon}
+                    </span>
+                    <Link href={`/category/${cat.id}`} className='hover:text-[#FF3E6E] transition-smooth'>{cat.name}</Link>
                 </li>
             ))}
         </ul>

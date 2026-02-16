@@ -13,7 +13,7 @@ export type Post = {
     category: { name: string, id: string, icon: string };
 };
 
-export default function BlogPostList({ posts }: { posts: Post[] }) {
+export default function BlogPostList({ posts, showCategory = true }: { posts: Post[], showCategory?: boolean }) {
     return (
         <ul className='grid grid-cols-2 md:grid-cols-3 gap-6 '>
             {posts.map((post) => (
@@ -22,7 +22,9 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
                         <span className=" material-symbols-outlined text-[#FF3E6E] !text-[38px]">{post.category.icon}
                         </span>
                     </Link>
-                    <Link href={`${ROUTES.basePath}${ROUTES.categoryPath}/${post.category.id}`} className=' text-white text-[10px] bg-[#FF3E6E] py-[4px] px-[6px] rounded-[8px] absolute top-[12px] left-[12px] leading-none hover:bg-gray-400 transition-smooth'>{post.category.name}</Link>
+                    {showCategory && (
+                        <Link href={`${ROUTES.basePath}${ROUTES.categoryPath}/${post.category.id}`} className=' text-white text-[10px] bg-[#FF3E6E] py-[4px] px-[6px] rounded-[8px] absolute top-[12px] left-[12px] leading-none hover:bg-gray-400 transition-smooth'>{post.category.name}</Link>
+                    )}
                     <Link className='block flex-1 p-[12px] pb-0 font-bold tracking-wide line-clamp-3 ' href={`${ROUTES.basePath}${post.id}`}>{post.title}
                     </Link>
                     <div className='block p-[12px] text-[12px]'>
