@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js ZENNBOOK
+Next.jsでブログを作りました。
 
-## Getting Started
+## URL
+実物は下記URLに掲載しています。サイトの公開にはVercelを利用しています。
 
-First, run the development server:
+https://zennbook.ayaoriko.com/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+詳しい制作の経緯はブログをご覧ください。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://ayaoriko.com/coding/react/nextjs-microcms/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.jsで設定したコマンドは、別リポジトリに記載しています。
+https://github.com/ayaoriko/nextjs-first-app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## デザイン
+[エンジニアのための情報共有コミュニティ Zenn](https://zenn.dev/)のデザインを参考にしました。
 
-## Learn More
+###  PCデザインカンプ
+#### TOPページ
+<img width="1280"  alt="Image" src="https://github.com/user-attachments/assets/76a3d4b5-29d8-4e23-9611-74338ff002b6" />
+#### 詳細ページ
+<img width="1280"  alt="Image" src="https://github.com/user-attachments/assets/d18b2f4b-6974-4944-877e-fa98e2e426f5" />
 
-To learn more about Next.js, take a look at the following resources:
+###  SPデザインカンプ
+#### TOPページ
+<img width="375"  alt="Image" src="https://github.com/user-attachments/assets/90198f4c-c504-4da2-ba59-52345dfd79c2" />
+#### 詳細ページ
+<img width="375"  alt="Image" src="https://github.com/user-attachments/assets/18e6a1ad-dfd5-4f70-8a0c-2af5b4f2ddd0" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 実装機能
+- microCMSからAPIを取得して投稿する機能(記事投稿・カテゴリー編集と紐付け)
+- サムネイルはカテゴリーごとにアイコンを設ける仕様
+- カテゴリーページ一覧
+- ページャーの実装
+- TypeScript・Tailwind CSS の導入
+- 記事一覧コンポーネントの共通化
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 環境
+- Node.js v22.20.0
+- Next.js v15.5.9
+- React v19.1.0
+- TypeScript v5.x
+- Sass（Dart Sass）v1.93.2
+- Tailwind CSS v4.x
+- @tailwindcss/typography v0.5.19
+- microcms-js-sdk v3.2.0
+- dayjs v1.11.18
